@@ -1,0 +1,19 @@
+body {
+	background: black;
+	overflow: hidden;
+}
+
+h1 {
+	font-family: 'Droid Sans';
+	color: #0044ff;
+}
+
+#mainCanvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+@font-face {
+	font-family: 'Droid Sans';
+}
