@@ -1,19 +1,50 @@
+* {
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 body {
-	background: black;
-	overflow: hidden;
-}
-
-h1 {
-	font-family: 'Droid Sans';
-	color: #0044ff;
-}
-
-#mainCanvas {
-	position: absolute;
-	top: 0px;
-	left: 0px;
+    background: black;
 }
 
 @font-face {
-	font-family: 'Droid Sans';
+    font-family: 'Droid Sans';
+}
+
+#topContainer {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    border: 0;
+    display: flex;
+    background: #b9b9b9;
+}
+header > h1 {
+    color: black;
+    font-family: 'Droid Sans';
+    flex: auto;
+    text-align: center;
+}
+#canvasContainer {
+    flex: 2;
+    background: black;
+}
+#mainCanvas {
+    border: 0px solid #c3c3c3;
+    background: white;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #000;
+}
+a:visited {
+    color: #888;
 }

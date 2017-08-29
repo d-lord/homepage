@@ -157,11 +157,10 @@ function initCanvas() {
 
     // TODO: window.onresize should trigger this (currently stretches)
     // adjust height/width, I think
-    c.style.height = '100%';
-    c.style.width = '100%';
     // internal size for rendering
-    c.height = c.offsetHeight;
-    c.width = c.offsetWidth;
+    let rect = c.parentNode.getBoundingClientRect();
+    c.height = rect.height; // TODO: there's a ~4px bottom margin sneaking in...
+    c.width = rect.width;
     var ymid = c.height/2; // rounding?
     var xmid = c.width/2;
 }

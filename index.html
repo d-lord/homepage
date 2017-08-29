@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
 <head>
 <title>lord.geek.nz</title>
@@ -24,13 +25,20 @@
 <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-<div id="header" style="border: 1px solid blue; height: 20%; display: flex; flex-direction: column; justify-content: space-between;">
-    <h1>foo</h1>
+<div id="topContainer">
+    <header>
+	<h1><a href="/f/CV-David-Lord-August-2017.pdf">résumé</a></h1>
+	<h1><a href="http://blog.lord.geek.nz">blog</a></h1>
+	<h1><a href="/shadow">shadow</a></h1>
+	<h1><a href="/radar">radar</a></h1>
+	<h1><a href="/wtf">wtf</a></h1>
+    </header>
+    <div id="canvasContainer">
+	<canvas id="mainCanvas">
+	Your browser does not support canvas. It may be worth upgrading.
+	</canvas>
+    </div>
+    <script src="index.js"></script>
 </div>
-<div id="canvasContainer" style="height: 80%; width: 100%;">
-<canvas id="mainCanvas" style="border:0px solid #c3c3c3; background:white;">
-Your browser does not support canvas. It may be worth upgrading.
-</canvas>
-<script src="index.js"></script>
 </body>
 </html>
