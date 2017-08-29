@@ -33,7 +33,7 @@ header > h1 {
 }
 #canvasContainer {
     flex: 2;
-    background: black;
+    background: white;
 }
 #mainCanvas {
     border: 0px solid #c3c3c3;
