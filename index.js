@@ -155,11 +155,13 @@ function initCanvas() {
     // c.style.background = "red"; // for debugging: black merges into macbook bezel
     // textbook first-world problem
 
-    // dimensions
-    var viewportH = window.innerHeight;
-    var viewportW = window.innerWidth;
-    c.height = viewportH;// - 50;
-    c.width = viewportW; // - 50;
+    // TODO: window.onresize should trigger this (currently stretches)
+    // adjust height/width, I think
+    c.style.height = '100%';
+    c.style.width = '100%';
+    // internal size for rendering
+    c.height = c.offsetHeight;
+    c.width = c.offsetWidth;
     var ymid = c.height/2; // rounding?
     var xmid = c.width/2;
 }
@@ -215,3 +217,4 @@ loadImages(imageSources, imageInfos);
 initCanvas();
 setLoadingView(true);
 window.onload = window.onresize = considerDrawingMain;
+
