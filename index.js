@@ -215,5 +215,7 @@ function setLoadingView(loading) {
 loadImages(imageSources, imageInfos);
 initCanvas();
 setLoadingView(true);
-window.onload = window.onresize = considerDrawingMain;
-
+window.addEventListener("load", considerDrawingMain);
+// These 'work' for resizing, but the canvas gets greedy.
+// window.addEventListener("resize", initCanvas);
+// window.addEventListener("resize", considerDrawingMain);
