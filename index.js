@@ -3,13 +3,16 @@ let imageSources = {
 }
 let nodes = [
     new Node("brisbane", "map", 0.87, 0.77, 100),
-    new Node("new_zealand", "map", 0.93, 0.83, 100),
+    new Node("new zealand", "map", 0.93, 0.83, 100),
     //new Node("junk", "map", 0.5, 0.5, 200),
     new Node("vanuatu", "map", 0.91, 0.715, 60),
+    new Node("new caledonia", "map", 0.905, 0.744, 30),
     new Node("uk", "map", 0.465, 0.327, 70),
+    new Node("france", "map", 0.473, 0.363, 30),
     new Node("poland", "map", 0.51, 0.327, 40),
     new Node("vietnam", "map", 0.753, 0.55, 50),
     new Node("tasmania", "map", 0.856, 0.864, 50),
+    new Node("singapore", "map", 0.743, 0.625, 40)
 ]
 let loadingAnimationId = "loadingAnimation";
 
