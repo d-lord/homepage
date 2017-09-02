@@ -1,4 +1,4 @@
 #!/bin/bash
 set -ex
 
-rsync -vr --exclude=deploy * orchid:/var/www/
+rsync -vr --exclude="$(basename $0)" -- * orchid:/var/www/
