@@ -1,5 +1,5 @@
 let imageSources = {
-	map: 'resources/HiRes_mono_LR.jpg',
+	map: 'resources/HiRes_mono_LR.png',
 }
 let nodes = [
     new Node("brisbane", "map", 0.87, 0.77, 100),
