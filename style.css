@@ -1,5 +1,10 @@
+/* these incantations make it full screen on everything,
+ * and should not be touched carelessly.
+ * it actually doesn't quite work on iOS because of the bottom toolbar that slides in and out there
+ * and there seems to be a ~4px bottom margin in firefox on my laptop which can't seem to be attributed to anything
+ * but fiddling is likely to make it worse, not better
+ */
 html, body {
-    /* height: 100%; */
     margin: 0;
     padding: 0;
 }
@@ -16,6 +21,7 @@ body {
     font-display: swap;
 }
 
+/* top-level container including keeping the image container constrained */
 #topContainer {
     overflow: auto;
     display: flex;
@@ -23,12 +29,17 @@ body {
     height: 100%;
 }
 
+
+/* pin identical-height bars to the top and bottom of the screen,
+ * calling them 'header' and 'footer' for semantic accuracy.
+ * below, we'll give them a blur effect if possible.
+ */
 header, footer {
-    border: 0;
     display: flex;
-    flex: 0 0 auto;
-    flex-wrap: wrap;
-    background: #b9b9b9;
+    position: absolute;
+    width: 100%;
+    background: rgba(185, 185, 185, 0.7);
+    border: 0;
 }
 header h1, footer h1 {
     flex: 1 1 auto;
@@ -36,24 +47,24 @@ header h1, footer h1 {
     line-height: 1em;
     padding: 0 0.3em;
 }
+header {
+    top: 0;
+}
+footer {
+    bottom: 0;
+}
 
+/* if we can use a snazzy Aero-style blur, do.
+ * this is enabled in Chrome but not Firefox or Safari at the moment
+ * (16-Jun-2020)
+ */
 @supports(backdrop-filter: blur(5px)) {
     header, footer {
-        position: absolute;
         backdrop-filter: blur(5px);
-        width: 100%;
-        background: rgba(185, 185, 185, 0.5);
-    }
-    header {
-        top: 0;
-    }
-    footer {
-        bottom: 0;
-    }
-    header h1, footer h1 {
-        opacity: 1;
+        background: rgba(185, 185, 185, 0.4);
     }
 }
+
 
 #imageContainer {
     flex: 1;
