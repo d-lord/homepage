@@ -36,7 +36,7 @@ body {
  */
 header, footer {
     display: flex;
-    position: absolute;
+    position: fixed;
     width: 100%;
     background: rgba(185, 185, 185, 0.7);
     border: 0;
