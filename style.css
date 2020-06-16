@@ -24,8 +24,6 @@ body {
 /* top-level container including keeping the image container constrained */
 #topContainer {
     overflow: auto;
-    display: flex;
-    flex-direction: column;
     height: 100%;
 }
 
@@ -67,7 +65,6 @@ footer {
 
 
 #imageContainer {
-    flex: 1;
     justify-content: center;
     min-height: 0;
 }
