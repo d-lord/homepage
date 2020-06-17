@@ -1,7 +1,6 @@
 /* these incantations make it full screen on everything,
  * and should not be touched carelessly.
  * it actually doesn't quite work on iOS because of the bottom toolbar that slides in and out there
- * and there seems to be a ~4px bottom margin in firefox on my laptop which can't seem to be attributed to anything
  * but fiddling is likely to make it worse, not better
  */
 html, body {
@@ -69,10 +68,15 @@ footer {
 #imageContainer {
     flex: 1;
     min-height: 0;
+    background-color: #59708f; /* custom to match the image */
 }
     
-#focusImage {
-    background-color: white;
+/* just putting it out there: I'm not thrilled with how <picture><source/><img/></picture> works
+ * as the actual img tag is the bit where you need to set image styling attributes,
+ * not the picture, and that seems unintuitive. the sources seem to be treated as overrides for img.src.
+ * but hey, this works pretty flawlessly, so what matter if it's a little unintuitive under the hood?
+ */
+#focusImage img {
     object-fit: cover;
     object-position: top center;
     width: 100%;
